@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string-array name="logInterval">
+        <item name="1000">Every 1 second</item>
+        <item name="5000">Every 5 seconds</item>
+        <item name="10000">Every 10 seconds</item>
+        <item name="30000">Every 30 seconds</item>
+        <item name="60000">Every 1 minute</item>
+        <item name="300000">Every 5 minutes</item>
+    </string-array>
+    <string-array name="logIntervalValues">
+        <item name="1000">1000</item>
+        <item name="5000">5000</item>
+        <item name="10000">10000</item>
+        <item name="30000">30000</item>
+        <item name="60000">60000</item>
+        <item name="300000">300000</item>
+    </string-array>
+    <string-array name="accuracy">
+        <item name="1">1 meter</item>
+        <item name="5">5 meters</item>
+        <item name="10">10 meters</item>
+        <item name="15">15 meters</item>
+        <item name="20">20 meters</item>
+        <item name="30">30 meters</item>
+    </string-array>
+    <string-array name="accuracyValues">
+        <item name="5">5</item>
+        <item name="10">10</item>
+        <item name="15">15</item>
+        <item name="20">20</item>
+        <item name="30">30</item>
+    </string-array>
+
+</resources>

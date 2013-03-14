@@ -1,0 +1,95 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3_hdpi"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".MainActivity" >
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="20dip"
+        android:layout_weight="0" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="220dp"
+        android:layout_height="138dp"
+        android:background="@drawable/map_button_style"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:minHeight="56dp"
+ 		/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="20dip"
+        android:layout_weight="0" />
+
+            <View
+        android:layout_width="0dp"
+        android:layout_height="120dip"
+        android:layout_weight="0" />
+
+    <Button
+        android:id="@+id/log_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/start_button_style"
+        android:minHeight="56dp" />
+
+</LinearLayout>
+
+<RelativeLayout
+    	android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/top_layout">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/record_text"
+                    android:layout_toRightOf="@+id/record_text"
+                    android:src="@drawable/arrow2" />
+
+                <TextView
+                    android:id="@+id/map_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="53dp"
+                    android:text="@string/map_title"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/map_text"
+                    android:layout_below="@+id/map_text"
+                    android:layout_marginLeft="46dp"
+                    android:src="@drawable/arrow1" />
+
+                <TextView
+                    android:id="@+id/record_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="144dp"
+                    android:text="@string/record_title"
+                    android:textSize="16sp" />
+ 
+    </RelativeLayout>
+    </FrameLayout>
