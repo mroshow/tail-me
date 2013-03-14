@@ -22,5 +22,10 @@
             android:key="accuracy"
             android:summary="Define how accurate the location fix should be"
             android:title="Logging accuracy" />
+                <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="instructions_toggle"
+            android:summary="Show or hide instruction dialogs"
+            android:title="Instructions On/Off" />
     </PreferenceCategory>
 </PreferenceScreen>

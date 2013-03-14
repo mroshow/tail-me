@@ -26,6 +26,7 @@
         <item name="30">30 meters</item>
     </string-array>
     <string-array name="accuracyValues">
+        <item name="1">1</item>
         <item name="5">5</item>
         <item name="10">10</item>
         <item name="15">15</item>
