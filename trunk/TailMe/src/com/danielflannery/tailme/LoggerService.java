@@ -1,3 +1,7 @@
+/* Author: Dan
+ * Summary: This service is ran from the LoggerActivity. It records the users
+ * location until the service is ended via a button in the logger activity.
+ */
 
 package com.danielflannery.tailme;
 
@@ -21,33 +25,24 @@ import java.util.ArrayList;
 public class LoggerService extends Service implements LocationListener {
     static final String TAG = "LoggerService";
     private ArrayList<Location> coordinatesList;
-    private Bundle extras;
     private Intent activityIntent;
     private String saveName;
     private SharedPreferences sharedPrefs;
-    // GPS Stuff
     private LocationManager locationManager;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        coordinatesList = new ArrayList<Location>();
-
-        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-
-        // GPS Stuff
+        coordinatesList = new ArrayList<Location>();    // Arraylist to hold the location details
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this); // Getting a reference to the DefaultSharedPreferences class
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-
-        Log.d(TAG, "onCreate");
+        Log.d(TAG, "onCreate"); // Debugging
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         activityIntent = intent;
-
-        // GPS Stuff taking min time and distance
-        // Work to be done here. variables need to be set in settings time,
-        // distance, etc
+        // Obtain parameters from sharedPreferences
         long logging_interval = Long.parseLong(sharedPrefs.getString("logging_interval", "5000"));
         float accuracy = Float.parseFloat(sharedPrefs.getString("accuracy", "1"));
 
@@ -58,7 +53,7 @@ public class LoggerService extends Service implements LocationListener {
                     accuracy, this);
         }
 
-        Log.d(TAG, "onStarted");
+        Log.d(TAG, "onStarted"); // Debugging
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -67,25 +62,22 @@ public class LoggerService extends Service implements LocationListener {
         super.onDestroy();
         if (activityIntent.getFlags() == -1) {
             try {
-                extras = activityIntent.getExtras();
+                activityIntent.getExtras();
                 Bundle bundle = activityIntent.getExtras();
-                saveName = bundle.getString("1");
+                saveName = bundle.getString("1");   // Get the saveName passed in the bundle
                 try {
-                    saveCsv();
+                    saveCsv();  // Call the case csv method
                 } catch (Exception ex) {
                     Toast.makeText(getApplicationContext(), "File save failed: " + ex,
                             Toast.LENGTH_SHORT).show();
                 }
                 Log.d(TAG, saveName);
             } catch (Exception ee) {
-                Log.d(TAG, "Failed, null pointer?");
-                Log.d(TAG, ee.toString());
             }
-
-            Log.d(TAG, "onDestroyed with an OK");
+            Log.d(TAG, "onDestroyed with an OK"); // Debugging
         }
         else if (activityIntent.getFlags() == 0) {
-            Log.d(TAG, "onDestroyed with a CANCEL");
+            Log.d(TAG, "onDestroyed with a CANCEL"); // Debugging
         }
         locationManager.removeUpdates(this);
     }
@@ -98,6 +90,7 @@ public class LoggerService extends Service implements LocationListener {
         if (!folder.exists()) {
             success = folder.mkdir();
         }
+        // Create the file 
         if (success) {
             try {
                 File myFile = new File(Environment.getExternalStorageDirectory() + "/TailMe/",
@@ -114,7 +107,7 @@ public class LoggerService extends Service implements LocationListener {
                 FileOutputStream fOut = new FileOutputStream(myFile);
                 OutputStreamWriter myOutWriter = new OutputStreamWriter(fOut);
 
-                Log.d(TAG, "writing to CSV!");
+                Log.d(TAG, "writing to CSV!"); // Debugging
                 for (int i = 0; i < coordinatesList.size(); i++)
                 {
 
@@ -143,10 +136,8 @@ public class LoggerService extends Service implements LocationListener {
                 }
                 myOutWriter.close();
                 fOut.close();
-                Log.d(TAG, "CSV SAVED!");
-                Toast.makeText(getApplicationContext(), "Log saved sucessfully!",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                Log.d(TAG, "CSV SAVED!"); // Debugging
+                
 
             } catch (Exception e) {
 
@@ -165,31 +156,28 @@ public class LoggerService extends Service implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
+        // confirming that the location is different than the last location. ( not needed!! )
         if (location.equals(locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER))
                 || location.equals(locationManager
                         .getLastKnownLocation(LocationManager.NETWORK_PROVIDER))) {
-            Log.d(TAG, "Identical location, saving adding to list");
+            Log.d(TAG, "Identical location.");
         }
-        coordinatesList.add(location);
+        
+        coordinatesList.add(location); // Add the location to the arraylist
         Log.d(TAG, "Location saved to arrayList from: " + location.getProvider());
 
     }
 
     @Override
     public void onProviderDisabled(String provider) {
-        // TODO Auto-generated method stub
-
     }
 
     @Override
     public void onProviderEnabled(String provider) {
-        // TODO Auto-generated method stub
-
     }
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-
     }
 
 }
