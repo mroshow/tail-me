@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:key="first_category"
+        android:title="General Preferences" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="network_provider_state"
+            android:summary="Enable or disable the network provider as a location source"
+            android:title="Network Provider On/Off" />
+        <ListPreference
+            android:defaultValue="5000"
+            android:entries="@array/logInterval"
+            android:entryValues="@array/logIntervalValues"
+            android:key="logging_interval"
+            android:summary="Define how often your location will be logged"
+            android:title="Logging interval" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/accuracy"
+            android:entryValues="@array/accuracyValues"
+            android:key="accuracy"
+            android:summary="Define how accurate the location fix should be"
+            android:title="Logging accuracy" />
+    </PreferenceCategory>
+</PreferenceScreen>
