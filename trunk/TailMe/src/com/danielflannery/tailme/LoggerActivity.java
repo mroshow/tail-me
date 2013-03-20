@@ -84,7 +84,7 @@ public class LoggerActivity extends Activity {
     private void showDialog() {
         AlertDialog.Builder alertdg = new AlertDialog.Builder(this);
         alertdg.setTitle("Name your saved log:");
-        alertdg.setMessage("Chose a save name:");
+        alertdg.setMessage("Choose a save name:");
         final EditText episode = new EditText(this);
         episode.setWidth(430);
         LinearLayout layout = new LinearLayout(this);
