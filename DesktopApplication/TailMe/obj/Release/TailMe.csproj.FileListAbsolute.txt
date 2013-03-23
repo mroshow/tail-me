@@ -1,0 +1,17 @@
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\TailMe.exe.config
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\TailMe.exe
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\TailMe.pdb
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\GMap.NET.Core.dll
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\GMap.NET.WindowsForms.dll
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\GMap.NET.Core.xml
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Release\GMap.NET.WindowsForms.xml
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.About.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.main.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.Properties.Resources.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.csproj.GenerateResource.Cache
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.exe
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.pdb
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.csprojResolveAssemblyReference.cache
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.help.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.Settings.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Release\TailMe.splash.resources

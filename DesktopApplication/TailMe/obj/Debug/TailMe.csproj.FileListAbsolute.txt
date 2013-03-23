@@ -1,0 +1,17 @@
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\TailMe.exe.config
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.csprojResolveAssemblyReference.cache
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.main.resources
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.Properties.Resources.resources
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.csproj.GenerateResource.Cache
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\TailMe.exe
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\TailMe.pdb
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\GMap.NET.Core.dll
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\GMap.NET.WindowsForms.dll
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\GMap.NET.Core.xml
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\bin\Debug\GMap.NET.WindowsForms.xml
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.exe
+c:\users\dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.pdb
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.About.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.help.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.Settings.resources
+C:\Users\Dan\documents\visual studio 2012\Projects\TailMe\TailMe\obj\Debug\TailMe.splash.resources
